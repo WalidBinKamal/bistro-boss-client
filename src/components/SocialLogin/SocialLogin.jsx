@@ -13,7 +13,7 @@ const SocialLogin = () => {
             .then(result => {
                 const userInfo = {
                     email: result.user?.email,
-                    nmame: result.user?.displayName,
+                    name: result.user?.displayName,
                 }
                 axiosPublic.post('/users', userInfo)
                     .then(res => {
